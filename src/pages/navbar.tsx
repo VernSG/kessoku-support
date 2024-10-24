@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "../../lib/utils"; // Pastikan path ini benar
+import { cn } from "../../lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "../../src/components/ui/navigation-menu"; // Pastikan path ini benar
+} from "../../src/components/ui/navigation-menu";
 
 const commands: { title: string; href: string; description: string }[] = [
   {
@@ -23,12 +23,12 @@ const commands: { title: string; href: string; description: string }[] = [
   },
   {
     title: "/info gempa",
-    href: "/docs/commands",
+    href: "/docs/commands/gempa",
     description: "Get information about Indonesian Earthquake.",
   },
   {
     title: "/suggestion",
-    href: "/docs/commands",
+    href: "/docs/commands/suggestion",
     description: "Allows users to submit suggestions to the server.",
   },
   {
@@ -51,11 +51,8 @@ const commands: { title: string; href: string; description: string }[] = [
 export function NavigationMenuDemo() {
   return (
     <div className="flex justify-center my-10">
-      {" "}
-      {/* Flex container for centering */}
       <NavigationMenu>
         <NavigationMenuList className="flex space-x-4">
-          {/* Getting Started Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -81,7 +78,7 @@ export function NavigationMenuDemo() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs/introduction" title="Introduction">
+                <ListItem href="/introduction" title="Introduction">
                   Overview of the bot's features and how to get started.
                 </ListItem>
                 <ListItem href="/invite" title="Invite the Bot">
@@ -90,8 +87,6 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* Commands Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -108,14 +103,21 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* Documentation Link */}
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
-              </NavigationMenuLink>
-            </Link>
+            <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[200px] gap-3 p-4">
+                <ListItem href="/docs/commands" title="Commands">
+                  Learn more about available commands.
+                </ListItem>
+                <ListItem href="/docs/tos" title="Terms of Service (ToS)">
+                  Read the Terms of Service for using the bot.
+                </ListItem>
+                <ListItem href="/docs/privacy" title="Privacy Policy">
+                  Read the Privacy Policy.
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

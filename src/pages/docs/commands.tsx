@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Footer from "@/components/ui/footer";
+
 export default function Commands() {
   return (
     <div className="max-w-3xl mx-auto my-10 px-6">
@@ -10,6 +13,12 @@ export default function Commands() {
         <li>
           <strong>/suggestion</strong> - Allows users to submit suggestions to
           the server.
+          <Link
+            href="/docs/commands/suggestion"
+            className="text-blue-500 ml-2 hover:underline"
+          >
+            See how to set suggestion channel.
+          </Link>
         </li>
         <li>
           <strong>/avatar</strong> - Shows the avatar of the user.
@@ -22,11 +31,21 @@ export default function Commands() {
           <strong>/manga</strong> - Searches manga information from various
           databases.
         </li>
+        <li>
+          <strong>/info gempa</strong> - Provides earthquake information.
+          <Link
+            href="/docs/commands/gempa"
+            className="text-blue-500 ml-2 hover:underline"
+          >
+            See how to set earthquake info channel.
+          </Link>
+        </li>
       </ul>
       <p className="text-lg mt-6">
         To see detailed usage instructions, type the command followed by help,
         for example <strong>/info help</strong>.
       </p>
+      <Footer />
     </div>
   );
 }

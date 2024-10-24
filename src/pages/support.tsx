@@ -1,3 +1,5 @@
+import Footer from "@/components/ui/footer";
+
 export default function Support() {
   return (
     <div className="max-w-3xl mx-auto my-10 px-6 text-center">
@@ -16,7 +18,7 @@ export default function Support() {
 
       <div className="mt-6">
         <a
-          href="https://trakteer.id/vern_sg/link" // Ganti link ini dengan tautan Saweria yang benar
+          href="https://trakteer.id/vern_sg/link"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-yellow-500 text-white rounded-lg shadow-lg hover:bg-yellow-400"
@@ -31,13 +33,14 @@ export default function Support() {
       </p>
       <div className="mt-4">
         <a
-          href="https://discord.gg/zmeA3gS9k2" // Ganti dengan link support server Discord
+          href="https://discord.gg/zmeA3gS9k2"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500"
         >
           Join Support Server
         </a>
+        <Footer />
       </div>
     </div>
   );

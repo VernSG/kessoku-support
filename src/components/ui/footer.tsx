@@ -70,8 +70,8 @@ const Footer = () => {
             <p className="p-color">{year} &copy; All rights reserved!</p>
           </div>
           <div className="footer-sec2-link">
-            <Link className="p-color no-decoration" href="/support">
-              /support
+            <Link className="p-color no-decoration" href="/docs/tos">
+              /TermsOfService
             </Link>
             <Link
               target="_blank"
@@ -80,7 +80,7 @@ const Footer = () => {
             >
               /source-code
             </Link>
-            <Link className="p-color no-decoration" href="#">
+            <Link className="p-color no-decoration" href="/docs/privacy">
               /privacy
             </Link>
           </div>
