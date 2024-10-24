@@ -17,95 +17,109 @@ import {
 
 const commands: { title: string; href: string; description: string }[] = [
   {
-    title: "Play",
-    href: "/docs/commands/play",
-    description: "Plays a song from YouTube or another source.",
+    title: "/userinfo",
+    href: "/docs/commands",
+    description: "Displays information about user.",
   },
   {
-    title: "Skip",
-    href: "/docs/commands/skip",
-    description: "Skips the currently playing track.",
+    title: "/info gempa",
+    href: "/docs/commands",
+    description: "Get information about Indonesian Earthquake.",
   },
   {
-    title: "Ban",
-    href: "/docs/commands/ban",
-    description: "Bans a user from the server.",
+    title: "/suggestion",
+    href: "/docs/commands",
+    description: "Allows users to submit suggestions to the server.",
   },
   {
-    title: "Kick",
-    href: "/docs/commands/kick",
-    description: "Kicks a user from the server.",
+    title: "/avatar",
+    href: "/docs/commands",
+    description: "Shows the avatar of the user.",
+  },
+  {
+    title: "/anime",
+    href: "/docs/commands",
+    description: "Searches anime information from various databases.",
+  },
+  {
+    title: "/manga",
+    href: "/docs/commands",
+    description: "Searches manga information from various databases.",
   },
 ];
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList className="flex space-x-4 ml-10">
-        {/* Getting Started Section */}
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <Image
-                      src="/1302070.png"
-                      alt="Bot Logo"
-                      width={24}
-                      height={24}
-                    />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Discord Bot
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Manage your server with powerful commands and features.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs/introduction" title="Introduction">
-                Overview of the bot's features and how to get started.
-              </ListItem>
-              <ListItem href="/invite" title="Invite the Bot">
-                Invite the bot to your server and start using commands.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        {/* Commands Section */}
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {commands.map((command) => (
-                <ListItem
-                  key={command.title}
-                  title={command.title}
-                  href={command.href}
-                >
-                  {command.description}
+    <div className="flex justify-center my-10">
+      {" "}
+      {/* Flex container for centering */}
+      <NavigationMenu>
+        <NavigationMenuList className="flex space-x-4">
+          {/* Getting Started Section */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/"
+                    >
+                      <Image
+                        src="/1302070.png"
+                        alt="Bot Logo"
+                        width={24}
+                        height={24}
+                      />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Discord Bot
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Manage your server with powerful commands and features.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem href="/docs/introduction" title="Introduction">
+                  Overview of the bot's features and how to get started.
                 </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+                <ListItem href="/invite" title="Invite the Bot">
+                  Invite the bot to your server and start using commands.
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        {/* Documentation Link */}
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+          {/* Commands Section */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {commands.map((command) => (
+                  <ListItem
+                    key={command.title}
+                    title={command.title}
+                    href={command.href}
+                  >
+                    {command.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          {/* Documentation Link */}
+          <NavigationMenuItem>
+            <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Documentation
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 }
 
