@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import NavigationMenuDemo from "@/components/ui/navbar";
 import CarouselPlugin from "@/components/carousel";
 import Footer from "@/components/ui/footer";
@@ -12,7 +12,7 @@ type HomeProps = {
   data?: HomeData;
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   // Ambil data di sini
   const data = {
     title: "Welcome to My Website",
