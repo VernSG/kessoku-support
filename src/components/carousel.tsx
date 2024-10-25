@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypographyDemo } from "@/components/ui/typography";
 import { Card, CardContent } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import Footer from "./ui/footer";
 
 export default function CarouselPlugin() {
   // Setup autoplay dengan ref untuk kontrol, tanpa stop
@@ -38,10 +39,10 @@ export default function CarouselPlugin() {
           ))}
         </CarouselContent>
       </Carousel>
-
       {/* Section untuk Pengenalan Bot */}
       <section className="w-full max-w-4xl text-center px-4">
         <TypographyDemo />
+        <Footer />
       </section>
     </div>
   );

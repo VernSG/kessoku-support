@@ -2,18 +2,19 @@
 
 import * as React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { cn } from "../../../lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "./navigation-menu";
+  navigationMenuTriggerStyle,
+} from "../../components/ui/navigation-menu";
 
-const commands = [
+const commands: { title: string; href: string; description: string }[] = [
   {
     title: "/userinfo",
     href: "/docs/commands",
@@ -46,21 +47,23 @@ const commands = [
   },
 ];
 
-export default function NavigationMenuDemo() {
+export function NavigationMenuDemo() {
   return (
     <div className="flex justify-center my-10">
       <NavigationMenu>
         <NavigationMenuList className="flex space-x-4">
-          {/* Getting Started Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
-                  <Link href="/" passHref legacyBehavior>
-                    <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/"
+                    >
                       <Image
-                        src="/image.png"
+                        src="/1302070.png"
                         alt="Bot Logo"
                         width={24}
                         height={24}
@@ -72,10 +75,10 @@ export default function NavigationMenuDemo() {
                         Manage your server with powerful commands and features.
                       </p>
                     </a>
-                  </Link>
+                  </NavigationMenuLink>
                 </li>
                 <ListItem href="/introduction" title="Introduction">
-                  Overview of the bot&apos;s features and how to get started.
+                  Overview of the bot's features and how to get started.
                 </ListItem>
                 <ListItem href="/invite" title="Invite the Bot">
                   Invite the bot to your server and start using commands.
@@ -83,8 +86,6 @@ export default function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* Commands Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -101,12 +102,10 @@ export default function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* Documentation Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ul className="grid w-[200px] gap-3 p-4">
                 <ListItem href="/docs/commands" title="Commands">
                   Learn more about available commands.
                 </ListItem>
@@ -115,9 +114,6 @@ export default function NavigationMenuDemo() {
                 </ListItem>
                 <ListItem href="/docs/privacy" title="Privacy Policy">
                   Read the Privacy Policy.
-                </ListItem>
-                <ListItem href="/team" title="Teams">
-                  Ryo Support Team.
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -129,12 +125,12 @@ export default function NavigationMenuDemo() {
 }
 
 const ListItem = React.forwardRef<
-  HTMLAnchorElement,
+  React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, href = "/", ...props }, ref) => {
+>(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <Link href={href} passHref legacyBehavior>
+      <NavigationMenuLink asChild>
         <a
           ref={ref}
           className={cn(
@@ -148,7 +144,7 @@ const ListItem = React.forwardRef<
             {children}
           </p>
         </a>
-      </Link>
+      </NavigationMenuLink>
     </li>
   );
 });

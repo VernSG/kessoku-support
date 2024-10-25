@@ -29,10 +29,7 @@ export function TypographyDemo() {
           />
           <Link
             href="/invite"
-            className={
-              "mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"
-            }
-            legacyBehavior
+            className="mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"
           >
             <i className="fab fa-discord mr-2" />
             Invite Ryo Yamada
@@ -48,7 +45,7 @@ export function TypographyDemo() {
               </p>
               <p className="text-gray-500 line-clamp-4">
                 With fast and customizable settings specific to your server, Ryo
-                gives you a easy moderation of server.
+                gives you easy moderation of your server.
               </p>
             </div>
           </div>
