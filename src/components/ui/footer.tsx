@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer-header">
             <ul>
               <li>
-                <Link className="h-color" href="/">
+                <Link className="h-color" href="/" legacyBehavior>
                   Ryo
                 </Link>
                 <span
@@ -38,17 +38,17 @@ const Footer = () => {
           <div className="footer-items">
             <ul>
               <li>
-                <Link className="p-color" href="/docs/commands">
+                <Link className="p-color" href="/docs/commands" legacyBehavior>
                   /commands
                 </Link>
               </li>
               <li>
-                <Link className="p-color" href="/support">
+                <Link className="p-color" href="/support" legacyBehavior>
                   /support
                 </Link>
               </li>
               <li>
-                <Link className="p-color" href="/support">
+                <Link className="p-color" href="/support" legacyBehavior>
                   /discord-server
                 </Link>
               </li>
@@ -70,17 +70,26 @@ const Footer = () => {
             <p className="p-color">{year} &copy; All rights reserved!</p>
           </div>
           <div className="footer-sec2-link">
-            <Link className="p-color no-decoration" href="/docs/tos">
+            <Link
+              className="p-color no-decoration"
+              href="/docs/tos"
+              legacyBehavior
+            >
               /tos
             </Link>
             <Link
               target="_blank"
               className="p-color no-decoration"
               href="/team"
+              legacyBehavior
             >
               /teams
             </Link>
-            <Link className="p-color no-decoration" href="/docs/privacy">
+            <Link
+              className="p-color no-decoration"
+              href="/docs/privacy"
+              legacyBehavior
+            >
               /privacy
             </Link>
           </div>

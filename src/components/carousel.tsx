@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypographyDemo } from "@/components/ui/typography";
 import { Card, CardContent } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import Footer from "./ui/footer";
 // Jangan impor Carousel dari file yang sama jika definisi ada di sini
 
 export function CarouselPlugin() {
@@ -43,6 +44,7 @@ export function CarouselPlugin() {
       {/* Section untuk Pengenalan Bot */}
       <section className="w-full max-w-4xl text-center px-4">
         <TypographyDemo />
+        <Footer />
       </section>
     </div>
   );

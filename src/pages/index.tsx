@@ -6,8 +6,9 @@ export default function Home() {
   return (
     <>
       <NavigationMenuDemo />
-      <CarouselPlugin />
-      <Footer />
+      <div className="my-8 p-9">
+        <CarouselPlugin />
+      </div>
     </>
   );
 }

@@ -16,6 +16,7 @@ export default function Commands() {
           <Link
             href="/docs/commands/suggestion"
             className="text-blue-500 ml-2 hover:underline"
+            legacyBehavior
           >
             See how to set suggestion channel.
           </Link>
@@ -36,6 +37,7 @@ export default function Commands() {
           <Link
             href="/docs/commands/gempa"
             className="text-blue-500 ml-2 hover:underline"
+            legacyBehavior
           >
             See how to set earthquake info channel.
           </Link>

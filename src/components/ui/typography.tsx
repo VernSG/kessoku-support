@@ -14,6 +14,82 @@ export function TypographyDemo() {
         updates!
       </p>
 
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 py-24">
+        <div className="col-span-4">
+          <p
+            className="text-white text-4xl font-bold"
+            dangerouslySetInnerHTML={{ __html: "RyoYamada" }}
+          />
+          <p
+            className="text-white text-md font-medium text-gray-500/75"
+            dangerouslySetInnerHTML={{
+              __html:
+                "How about creating the best environment to relax yourself with your own emotions?",
+            }}
+          />
+          <a
+            href="/invite"
+            className={
+              "mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"
+            }
+          >
+            <i className="fab fa-discord mr-2" />
+            Invite Ryo Yamada
+          </a>
+        </div>
+
+        <div className="col-span-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div className="text-white">
+              <p className="text-xl font-semibold mt-5">
+                <i className={`fa fa-cogs text-2xl text-amber-500`} />{" "}
+                Optimization
+              </p>
+              <p className="text-gray-500 line-clamp-4">
+                With fast and customizable settings specific to your server, Ryo
+                gives you a easy moderation of server.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="text-white">
+              <p className="text-xl font-semibold mt-5">
+                <i
+                  className={`fa fa-universal-access text-2xl text-amber-500`}
+                />{" "}
+                Universal
+              </p>
+              <p className="text-gray-500 line-clamp-4">
+                A bot that supports Anime and Manga commands | (It is a bot that
+                complies with all copyrights and licenses.)
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="text-white">
+              <p className="text-xl font-semibold mt-5">
+                <i className={`fa fa-shield text-2xl text-amber-500`} />{" "}
+                Security
+              </p>
+              <p className="text-gray-500 line-clamp-4">
+                An open source safe bot that you can browse and help us develop.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="text-white">
+              <p className="text-xl font-semibold mt-5">
+                <i className={`fa fa-ticket text-2xl text-amber-500`} /> Support
+              </p>
+              <p className="text-gray-500 line-clamp-4">
+                With our best teammates, we provide the fastest response to
+                anyone who needs help.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         What Can This Bot Do?
       </h2>
@@ -37,62 +113,6 @@ export function TypographyDemo() {
         to keeping your server in order!&quot;
       </blockquote>
 
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
-        Why Choose This Bot?
-      </h3>
-
-      <p className="leading-7 mt-6">
-        Our bot is not just another Discord bot. It&apos;s designed with users
-        in mind:
-      </p>
-
-      <ul className="my-6 ml-6 list-disc space-y-2">
-        <li>Highly responsive with fast command processing</li>
-        <li>Reliable uptime with minimal downtime</li>
-        <li>Easy-to-use interface with detailed documentation</li>
-        <li>Seamless integration with other Discord bots and services</li>
-      </ul>
-
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
-        Features and Commands
-      </h3>
-
-      <p className="leading-7 mt-6">
-        The bot comes equipped with a variety of commands to keep your server
-        engaged and under control. Here are some of the main features:
-      </p>
-
-      <div className="my-6 w-full overflow-y-auto">
-        <table className="w-full table-auto">
-          <thead>
-            <tr className="m-0 border-t p-0 even:bg-gray-800">
-              <th className="border px-4 py-2 text-left font-bold">Feature</th>
-              <th className="border px-4 py-2 text-left font-bold">Command</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="m-0 border-t p-0 bg-gray-900 hover:bg-gray-800">
-              <td className="border px-4 py-2 text-left">
-                Earthquake Information
-              </td>
-              <td className="border px-4 py-2 text-left">/info gempa</td>
-            </tr>
-            <tr className="m-0 border-t p-0 bg-gray-800 hover:bg-gray-700">
-              <td className="border px-4 py-2 text-left">Moderation Tools</td>
-              <td className="border px-4 py-2 text-left">/ban [user]</td>
-            </tr>
-            <tr className="m-0 border-t p-0 bg-gray-900 hover:bg-gray-800">
-              <td className="border px-4 py-2 text-left">
-                Anime Manga Command
-              </td>
-              <td className="border px-4 py-2 text-left">/anime /manga</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p className="leading-7 mt-6">Check commands in navigation menu docs</p>
-
       <p className="leading-7 mt-6">
         Whether you&apos;re looking to moderate your server, get real-time
         updates on important events, or just have fun, this bot has everything
@@ -103,14 +123,6 @@ export function TypographyDemo() {
         Ready to enhance your Discord experience? Invite the bot to your server
         and take control today!
       </p>
-
-      <div className="mt-6 text-center">
-        <Link href="/invite">
-          <a className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500">
-            Invite the Bot Now!
-          </a>
-        </Link>
-      </div>
     </div>
   );
 }
