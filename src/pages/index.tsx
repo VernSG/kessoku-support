@@ -6,14 +6,14 @@ import dynamic from "next/dynamic";
 const NavigationMenuDemo = dynamic(
   () => import("../components/ui/navbar").then((mod) => mod.default),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 
 const CarouselPlugin = dynamic(
   () => import("../components/carousel").then((mod) => mod.default),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 
