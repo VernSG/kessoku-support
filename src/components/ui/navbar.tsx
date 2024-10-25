@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,8 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "../../src/components/ui/navigation-menu";
+} from "./navigation-menu";
 
 const commands: { title: string; href: string; description: string }[] = [
   {
@@ -59,23 +58,23 @@ export function NavigationMenuDemo() {
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <Image
-                        src="/image.png"
-                        alt="Bot Logo"
-                        width={24}
-                        height={24}
-                      />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Discord Bot
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Manage your server with powerful commands and features.
-                      </p>
-                    </a>
+                    <Link href="/" legacyBehavior>
+                      <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                        <Image
+                          src="/image.png"
+                          alt="Bot Logo"
+                          width={24}
+                          height={24}
+                        />
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          Discord Bot
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Manage your server with powerful commands and
+                          features.
+                        </p>
+                      </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/introduction" title="Introduction">
@@ -106,7 +105,7 @@ export function NavigationMenuDemo() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* Documentation Section with the same layout as Commands */}
+          {/* Documentation Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -135,23 +134,28 @@ export function NavigationMenuDemo() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, children, href, ...props }, ref) => {
+  // Pastikan href adalah string yang valid, atau gunakan fallback ke "/" jika tidak ada
+  const safeHref = href || "/";
+
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
+        <Link href={safeHref} legacyBehavior>
+          <a
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );

@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { NavigationMenuDemo } from "./navbar";
+import { NavigationMenuDemo } from "../components/ui/navbar";
 import { CarouselPlugin } from "./carousel";
 import Footer from "@/components/ui/footer";
 
