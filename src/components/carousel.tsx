@@ -4,8 +4,6 @@ import Image from "next/image";
 import { TypographyDemo } from "@/components/ui/typography";
 import { Card, CardContent } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
-import Footer from "./ui/footer";
-// Jangan impor Carousel dari file yang sama jika definisi ada di sini
 
 export default function CarouselPlugin() {
   // Setup autoplay dengan ref untuk kontrol, tanpa stop
