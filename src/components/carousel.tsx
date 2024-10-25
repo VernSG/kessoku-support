@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Footer from "./ui/footer";
 // Jangan impor Carousel dari file yang sama jika definisi ada di sini
 
-export function CarouselPlugin() {
+const CarouselPlugin: React.FC = () => {
   // Setup autoplay dengan ref untuk kontrol, tanpa stop
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false }) // stopOnInteraction false untuk terus berjalan
@@ -48,4 +48,5 @@ export function CarouselPlugin() {
       </section>
     </div>
   );
-}
+};
+export default CarouselPlugin;

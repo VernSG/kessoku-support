@@ -46,7 +46,7 @@ const commands = [
   },
 ];
 
-export function NavigationMenuDemo() {
+const NavigationMenuDemo: React.FC = () => {
   return (
     <div className="flex justify-center my-10">
       <NavigationMenu>
@@ -126,7 +126,7 @@ export function NavigationMenuDemo() {
       </NavigationMenu>
     </div>
   );
-}
+};
 
 const ListItem = React.forwardRef<
   HTMLAnchorElement,
@@ -153,3 +153,4 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+export default NavigationMenuDemo;
