@@ -44,7 +44,6 @@ export default function CarouselPlugin() {
       {/* Section untuk Pengenalan Bot */}
       <section className="w-full max-w-4xl text-center px-4">
         <TypographyDemo />
-        <Footer />
       </section>
     </div>
   );
