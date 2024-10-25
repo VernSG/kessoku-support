@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
       <h2 className="text-2xl font-semibold mb-4">1. Information We Collect</h2>
       <p className="mb-4">
         Our bot does not collect or store any personal information. We may
-        process certain user data during the bot's interaction with Discord
+        process certain user data during the bot&apos;s interaction with Discord
         servers, but no data is stored persistently outside of Discord.
       </p>
 
@@ -21,17 +21,18 @@ export default function PrivacyPolicy() {
         2. How We Use Your Information
       </h2>
       <p className="mb-4">
-        We use the information provided by Discord’s APIs to facilitate the
-        bot’s functionality. This includes managing server roles, providing
-        information about users (e.g., user avatars), and managing commands
-        related to the server’s administration.
+        We use the information provided by Discord&rsquo;s APIs to facilitate
+        the bot&rsquo;s functionality. This includes managing server roles,
+        providing information about users (e.g., user avatars), and managing
+        commands related to the server&rsquo;s administration.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">3. Data Protection</h2>
       <p className="mb-4">
         The bot does not store any personal data. All interactions happen in
-        real-time and do not involve long-term storage. We follow Discord’s
-        privacy and security policies to ensure user data remains safe.
+        real-time and do not involve long-term storage. We follow
+        Discord&rsquo;s privacy and security policies to ensure user data
+        remains safe.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">4. Third-Party Services</h2>
@@ -51,7 +52,7 @@ export default function PrivacyPolicy() {
 
       <p className="mb-4">
         If you have any questions about this Privacy Policy, please contact us
-        at [your contact email].
+        at [snexmania76@gmail.com].
       </p>
       <Footer />
     </div>

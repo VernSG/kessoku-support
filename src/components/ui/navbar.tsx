@@ -78,7 +78,7 @@ export function NavigationMenuDemo() {
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/introduction" title="Introduction">
-                  Overview of the bot's features and how to get started.
+                  Overview of the bot&apos;s features and how to get started.
                 </ListItem>
                 <ListItem href="/invite" title="Invite the Bot">
                   Invite the bot to your server and start using commands.

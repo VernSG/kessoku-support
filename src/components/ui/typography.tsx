@@ -31,8 +31,8 @@ export function TypographyDemo() {
       </ul>
 
       <blockquote className="mt-6 border-l-4 pl-6 italic">
-        "A Discord bot that does it all — from keeping you informed to keeping
-        your server in order!"
+        &quot;A Discord bot that does it all &mdash; from keeping you informed
+        to keeping your server in order!&quot;
       </blockquote>
 
       <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
@@ -40,8 +40,8 @@ export function TypographyDemo() {
       </h3>
 
       <p className="leading-7 mt-6">
-        Our bot is not just another Discord bot. It's designed with users in
-        mind:
+        Our bot is not just another Discord bot. It&apos;s designed with users
+        in mind:
       </p>
 
       <ul className="my-6 ml-6 list-disc space-y-2">
@@ -92,8 +92,9 @@ export function TypographyDemo() {
       <p className="leading-7 mt-6">Check commands in navigation menu docs</p>
 
       <p className="leading-7 mt-6">
-        Whether you're looking to moderate your server, get real-time updates on
-        important events, or just have fun, this bot has everything you need.
+        Whether you&apos;re looking to moderate your server, get real-time
+        updates on important events, or just have fun, this bot has everything
+        you need.
       </p>
 
       <p className="leading-7 mt-6 font-bold">

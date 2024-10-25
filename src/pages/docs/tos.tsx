@@ -12,9 +12,9 @@ export default function TermsOfService() {
       <p className="mb-4">
         This bot is provided as-is and may be updated or removed at any time.
         The bot is intended for use on Discord servers in accordance with
-        Discord’s Terms of Service. Abusive behavior, misuse of commands, or any
-        violation of Discord’s guidelines may result in the bot being banned
-        from your server.
+        Discord&apos;s Terms of Service. Abusive behavior, misuse of commands,
+        or any violation of Discord&apos;s guidelines may result in the bot
+        being banned from your server.
       </p>
       <h2 className="text-2xl font-semibold mb-4">Data Policy</h2>
       <p className="mb-4">

@@ -9,9 +9,9 @@ export default function Introduction() {
       <p className="text-lg leading-relaxed">
         Welcome to our powerful Discord bot! This bot helps you manage your
         server with ease through a variety of commands, from user moderation to
-        interactive entertainment features. It's designed to be intuitive, fast,
-        and reliable. Whether you want to keep your server under control or
-        simply have fun with your community, this bot has got you covered.
+        interactive entertainment features. It&apos;s designed to be intuitive,
+        fast, and reliable. Whether you want to keep your server under control
+        or simply have fun with your community, this bot has got you covered.
       </p>
       <p className="text-lg leading-relaxed mt-4">
         With commands like <strong>/info</strong> and <strong>/avatar</strong>,
