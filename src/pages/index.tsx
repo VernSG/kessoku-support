@@ -1,5 +1,5 @@
 import { NavigationMenuDemo } from "../components/ui/navbar";
-import { CarouselPlugin } from "../components/ui/carousel";
+import { CarouselPlugin } from "../components/carousel";
 import Footer from "@/components/ui/footer";
 
 export default function Home() {
