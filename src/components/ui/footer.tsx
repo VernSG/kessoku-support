@@ -71,14 +71,14 @@ const Footer = () => {
           </div>
           <div className="footer-sec2-link">
             <Link className="p-color no-decoration" href="/docs/tos">
-              /TermsOfService
+              /tos
             </Link>
             <Link
               target="_blank"
               className="p-color no-decoration"
-              href="https://github.com/VernSG"
+              href="/team"
             >
-              /source-code
+              /teams
             </Link>
             <Link className="p-color no-decoration" href="/docs/privacy">
               /privacy

@@ -64,7 +64,7 @@ export function NavigationMenuDemo() {
                       href="/"
                     >
                       <Image
-                        src="/1302070.png"
+                        src="/image.png"
                         alt="Bot Logo"
                         width={24}
                         height={24}
@@ -87,6 +87,8 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          {/* Commands Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -103,10 +105,12 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          {/* Documentation Section with the same layout as Commands */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[200px] gap-3 p-4">
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 <ListItem href="/docs/commands" title="Commands">
                   Learn more about available commands.
                 </ListItem>
@@ -115,6 +119,9 @@ export function NavigationMenuDemo() {
                 </ListItem>
                 <ListItem href="/docs/privacy" title="Privacy Policy">
                   Read the Privacy Policy.
+                </ListItem>
+                <ListItem href="/team" title="Teams">
+                  Ryo Support Team.
                 </ListItem>
               </ul>
             </NavigationMenuContent>
