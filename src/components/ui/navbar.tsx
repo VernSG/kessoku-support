@@ -47,33 +47,57 @@ const commands = [
   },
 ];
 
+const documentationLinks = [
+  {
+    title: "Commands",
+    href: "/docs/commands",
+    description: "Learn more about available commands.",
+  },
+  {
+    title: "Terms of Service (ToS)",
+    href: "/docs/tos",
+    description: "Read the Terms of Service for using the bot.",
+  },
+  {
+    title: "Privacy Policy",
+    href: "/docs/privacy",
+    description: "Read the Privacy Policy.",
+  },
+  {
+    title: "Teams",
+    href: "/team",
+    description: "Ryo support team.",
+  },
+];
+
 export function NavigationMenuDemo() {
   return (
     <div className="flex justify-center my-10">
       <NavigationMenu>
         <NavigationMenuList className="flex space-x-4">
+          {/* Getting Started Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <Link href="/" passHref>
-                      <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-                        <Image
-                          src="/1302070.png"
-                          alt="Bot Logo"
-                          width={24}
-                          height={24}
-                        />
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          Discord Bot
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Manage your server with powerful commands and
-                          features.
-                        </p>
-                      </a>
+                    <Link
+                      href="/"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    >
+                      <Image
+                        src="/1.jpg"
+                        alt="Bot Logo"
+                        width={24}
+                        height={24}
+                      />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Discord Bot
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Manage your server with powerful commands and features.
+                      </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
@@ -86,6 +110,8 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          {/* Commands Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Commands</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -102,19 +128,17 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          {/* Documentation Section */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[200px] gap-3 p-4">
-                <ListItem href="/docs/commands" title="Commands">
-                  Learn more about available commands.
-                </ListItem>
-                <ListItem href="/docs/tos" title="Terms of Service (ToS)">
-                  Read the Terms of Service for using the bot.
-                </ListItem>
-                <ListItem href="/docs/privacy" title="Privacy Policy">
-                  Read the Privacy Policy.
-                </ListItem>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {documentationLinks.map((doc) => (
+                  <ListItem key={doc.title} title={doc.title} href={doc.href}>
+                    {doc.description}
+                  </ListItem>
+                ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -125,26 +149,25 @@ export function NavigationMenuDemo() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
+  HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, children, href = "/", ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link href="/" passHref>
-          <a
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          </a>
+        <Link
+          href={href}
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
         </Link>
       </NavigationMenuLink>
     </li>
