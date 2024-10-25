@@ -1,25 +1,6 @@
-"use client";
-
-import dynamic from "next/dynamic";
-
-// Mengimpor komponen secara dinamis untuk mencegah SSR jika mereka menggunakan API browser
-const NavigationMenuDemo = dynamic(
-  () => import("../components/ui/navbar").then((mod) => mod.default),
-  {
-    ssr: true,
-  }
-);
-
-const CarouselPlugin = dynamic(
-  () => import("../components/carousel").then((mod) => mod.default),
-  {
-    ssr: true,
-  }
-);
-
-const Footer = dynamic(() => import("../components/ui/footer"), {
-  ssr: false,
-});
+import CarouselPlugin from "@/components/carousel";
+import Footer from "@/components/ui/footer";
+import NavigationMenuDemo from "@/components/ui/navbar";
 
 export default function Home() {
   return (
