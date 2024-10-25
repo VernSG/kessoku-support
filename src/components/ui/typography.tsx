@@ -27,15 +27,16 @@ export function TypographyDemo() {
                 "How about creating the best environment to relax yourself with your own emotions?",
             }}
           />
-          <a
+          <Link
             href="/invite"
             className={
               "mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"
             }
+            legacyBehavior
           >
             <i className="fab fa-discord mr-2" />
             Invite Ryo Yamada
-          </a>
+          </Link>
         </div>
 
         <div className="col-span-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
