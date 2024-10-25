@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function TypographyDemo() {
   return (
     <div className="px-4 py-8 max-w-4xl mx-auto">
@@ -103,12 +105,11 @@ export function TypographyDemo() {
       </p>
 
       <div className="mt-6 text-center">
-        <a
-          href="/invite"
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500"
-        >
-          Invite the Bot Now!
-        </a>
+        <Link href="/invite">
+          <a className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500">
+            Invite the Bot Now!
+          </a>
+        </Link>
       </div>
     </div>
   );

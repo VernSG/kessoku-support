@@ -20,7 +20,7 @@ export default function TermsOfService() {
       <p className="mb-4">
         This bot does not store or retain any personal information. All data is
         processed in real-time and no information is saved outside of the
-        server's current session.
+        server&apos;s current session.
       </p>
       <h2 className="text-2xl font-semibold mb-4">Liability</h2>
       <p className="mb-4">
