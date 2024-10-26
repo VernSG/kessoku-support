@@ -54,6 +54,11 @@ const documentationLinks = [
     description: "Learn more about available commands.",
   },
   {
+    title: "Vote",
+    href: "https://top.gg/bot/1256409606373113988",
+    description: "Top.gg vote.",
+  },
+  {
     title: "Terms of Service (ToS)",
     href: "/docs/tos",
     description: "Read the Terms of Service for using the bot.",
