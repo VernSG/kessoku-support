@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "./footer";
 
 export function TypographyDemo() {
   return (
@@ -121,6 +122,7 @@ export function TypographyDemo() {
         Ready to enhance your Discord experience? Invite the bot to your server
         and take control today!
       </p>
+      <Footer />
     </div>
   );
 }
