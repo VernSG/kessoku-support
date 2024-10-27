@@ -13,12 +13,17 @@ export default function Commands() {
         <li>
           <strong>/suggestion</strong> - Allows users to submit suggestions to
           the server.
-          <Link
-            href="/docs/commands/suggestion"
-            className="text-blue-500 ml-2 hover:underline"
-            legacyBehavior
-          >
-            See how to set suggestion channel.
+          <Link href="/docs/commands/suggestion" legacyBehavior>
+            <a
+              style={{
+                color: "#4F46E5",
+                fontWeight: "bold",
+                marginLeft: "8px",
+                textDecoration: "underline",
+              }}
+            >
+              See how to set suggestion channel.
+            </a>
           </Link>
         </li>
         <li>
@@ -34,12 +39,17 @@ export default function Commands() {
         </li>
         <li>
           <strong>/info gempa</strong> - Provides earthquake information.
-          <Link
-            href="/docs/commands/gempa"
-            className="text-blue-500 ml-2 hover:underline"
-            legacyBehavior
-          >
-            See how to set earthquake info channel.
+          <Link href="/docs/commands/gempa" legacyBehavior>
+            <a
+              style={{
+                color: "#4F46E5",
+                fontWeight: "bold",
+                marginLeft: "8px",
+                textDecoration: "underline",
+              }}
+            >
+              See how to set earthquake info channel.
+            </a>
           </Link>
         </li>
       </ul>
