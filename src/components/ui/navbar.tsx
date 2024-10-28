@@ -73,6 +73,11 @@ const documentationLinks = [
     href: "/team",
     description: "Ryo support team.",
   },
+  {
+    title: "Blog",
+    href: "/posts",
+    description: "Ryo Blog.",
+  },
 ];
 
 export function NavigationMenuDemo() {
