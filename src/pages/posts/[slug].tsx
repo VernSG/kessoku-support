@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Link from "next/link";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"; // Pastikan ini diimport dari next-mdx-remote
 import rehypePrism from "rehype-prism-plus";
 import { getAllMdx } from "../../../lib/mdx";
 import { MDXFrontMatter } from "../../../lib/types";
@@ -11,13 +11,14 @@ import { components } from "@/components/MDX";
 import { Prose } from "@/components/Prose";
 import { cx } from "../../../lib/utils";
 import remarkGfm from "remark-gfm";
+
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
 
 interface PostProps {
   frontMatter: MDXFrontMatter;
-  mdx: any;
+  mdx: MDXRemoteSerializeResult<Record<string, unknown>>; // Gunakan tipe ini untuk mdx
   previous: MDXFrontMatter | null;
   next: MDXFrontMatter | null;
 }
