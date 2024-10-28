@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Footer from "./footer";
 
 export function TypographyDemo() {
   return (
@@ -88,41 +87,6 @@ export function TypographyDemo() {
           </div>
         </div>
       </div>
-
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-        What Can This Bot Do?
-      </h2>
-
-      <p className="leading-7 mt-6">
-        Our bot offers a wide range of commands and functionalities to help you
-        run your server smoothly:
-      </p>
-
-      <ul className="my-6 ml-6 list-disc space-y-2">
-        <li>
-          Get real-time earthquake information with <strong>/info gempa</strong>
-        </li>
-        <li>Kick or ban users with ease</li>
-        <li>Customizable commands tailored to your community</li>
-        <li>Automated moderation to prevent spamming</li>
-      </ul>
-
-      <blockquote className="mt-6 border-l-4 pl-6 italic">
-        &quot;A Discord bot that does it all &mdash; from keeping you informed
-        to keeping your server in order!&quot;
-      </blockquote>
-
-      <p className="leading-7 mt-6">
-        Whether you&apos;re looking to moderate your server, get real-time
-        updates on important events, or just have fun, this bot has everything
-        you need.
-      </p>
-
-      <p className="leading-7 mt-6 font-bold">
-        Ready to enhance your Discord experience? Invite the bot to your server
-        and take control today!
-      </p>
-      <Footer />
     </div>
   );
 }

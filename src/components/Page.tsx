@@ -25,8 +25,8 @@ export const Page: React.FC<PageProps> = ({
     ? onlyText(description)
     : siteConfig.siteDescription;
   const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail;
-  // fixed https://github.com/vercel/next.js/discussions/38256
   const customTitle = `${metaTitle} - ${siteConfig.siteName}`;
+
   return (
     <>
       <Head>
@@ -42,7 +42,7 @@ export const Page: React.FC<PageProps> = ({
       </Head>
       <header
         className={cx(
-          "mb-8 pb-8 border-b",
+          "pt-0 mt-0 mb-4 border-b",
           "border-gray-200",
           "dark:border-gray-700"
         )}
@@ -56,7 +56,7 @@ export const Page: React.FC<PageProps> = ({
         ) : null}
         <h1 className="font-bold text-3xl">{title}</h1>
         {description ? (
-          <div className="mt-4">
+          <div className="mt-2">
             <Prose>
               {typeof description === "string" ? (
                 <p>{description}</p>
@@ -67,7 +67,11 @@ export const Page: React.FC<PageProps> = ({
           </div>
         ) : null}
       </header>
-      {children}
+      <div className="max-w-3xl px-4">
+        {" "}
+        {/* Hilangkan mx-auto untuk menempel ke atas */}
+        {children}
+      </div>
     </>
   );
 };

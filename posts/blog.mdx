@@ -1,0 +1,70 @@
+---
+title: "Cara Berkontribusi ke Blog di GitHub"
+description: "Panduan langkah-langkah untuk kontribusi ke blog di GitHub"
+date: "2024-10-09"
+tags: ["git", "github", "open-source"]
+---
+
+<Note emoji="📚">
+  Panduan ini akan membantu Anda dalam berkontribusi ke blog yang di-host di
+  GitHub menggunakan URL
+  [https://github.com/VernSG/blog.git](https://github.com/VernSG/blog.git).
+</Note>
+
+![Langkah-langkah Kontribusi ke Blog GitHub](/blog.png)
+
+### Langkah-Langkah Berkontribusi ke Blog di GitHub
+
+### Langkah-langkah Menambahkan Blog Baru
+
+Ikuti langkah-langkah berikut ini untuk menambahkan blog baru menggunakan format MDX:
+
+```bash
+# Langkah 1: Fork Repository
+# Buka URL berikut untuk melakukan fork repository:
+https://github.com/VernSG/blog.git
+
+# Setelah melakukan fork, clone repository yang sudah Anda fork ke komputer Anda:
+git clone https://github.com/username/repoyangdifork.git
+
+# Langkah 2: Menambahkan Blog Baru
+# Buat file MDX baru di dalam folder posts/
+cd posts
+touch blogbaru.mdx
+
+# Isi file blogbaru.mdx dengan konten berikut:
+---
+title: \"Judul Blog Anda\"
+description: \"Deskripsi singkat tentang blog Anda.\"
+date: \"2024-10-08\"
+tags: ['tag1', 'tag2']
+---
+
+<Note emoji=\"👋\">Selamat datang di blog baru Anda!</Note>
+
+Konten blog Anda dimulai di sini. Anda dapat menggunakan berbagai elemen Markdown dan MDX untuk memperkaya tulisan Anda.
+" > blogbaru.mdx
+
+# Langkah 3: Inisialisasi Git dan Push Perubahan
+# Inisialisasi Git di dalam folder repository Anda:
+git init
+
+# Tambahkan semua perubahan yang telah Anda buat:
+git add .
+
+# Buat commit untuk perubahan Anda:
+git commit -m "Menambahkan blog baru"
+
+# Set URL origin ke repository fork Anda:
+git remote set-url origin https://github.com/username/repoyangdifork.git
+
+# Push perubahan ke repository Anda di GitHub:
+git push origin main
+
+
+# Langkah 4: Membuat Pull Request
+
+Setelah Anda melakukan push, buka repository Anda di GitHub dan buat pull request (PR) untuk kontribusi Anda. Setelah saya melihatnya, saya akan menerima kontribusi tersebut.
+
+Selamat! Anda sekarang telah menambahkan blog baru menggunakan format MDX. Jika ada pertanyaan, jangan ragu untuk bertanya!
+```
