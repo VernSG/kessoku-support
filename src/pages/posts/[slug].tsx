@@ -4,7 +4,7 @@ import Link from "next/link";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypePrism from "rehype-prism-plus";
-import { getAllMdx, getMdx } from "../../../lib/mdx";
+import { getAllMdx } from "../../../lib/mdx";
 import { MDXFrontMatter } from "../../../lib/types";
 import { Page } from "@/components/Page";
 import { components } from "@/components/MDX";
