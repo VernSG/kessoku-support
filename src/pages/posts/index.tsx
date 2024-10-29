@@ -4,6 +4,7 @@ import { MDXFrontMatter } from "../../../lib/types";
 import { Page } from "@/components/Page";
 import { PostList } from "@/components/PostList";
 import { NavigationMenuDemo } from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 
 interface PostsProps {
   posts: Array<MDXFrontMatter>;
@@ -17,6 +18,7 @@ const Posts: NextPage<PostsProps> = ({ posts }) => {
         <Page title="Posts" description="Blog post tentang Ryo">
           <PostList posts={posts} />
         </Page>
+        <Footer />
       </div>
     </>
   );

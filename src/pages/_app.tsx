@@ -1,9 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/partials/_footer.scss";
-
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
-import Footer from "../components/ui/footer"; // Pastikan untuk mengganti sesuai path yang benar
 import { NavigationMenu } from "@/components/ui/navigation-menu";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -24,7 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <main id="main">
           <Component {...pageProps} />
         </main>
-        <Footer />
       </div>
     </ThemeProvider>
   );
