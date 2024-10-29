@@ -9,7 +9,7 @@ import Footer from "@/components/ui/footer";
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-12">
+    <div className="min-h-screen text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold mb-12 text-center">Meet Our Team</h1>
 
