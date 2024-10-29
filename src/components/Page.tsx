@@ -42,7 +42,7 @@ export const Page: React.FC<PageProps> = ({
       </Head>
       <header
         className={cx(
-          "pt-0 mt-0 mb-4 border-b",
+          "pt-8 mt-8 mb-8 border-b",
           "border-gray-200",
           "dark:border-gray-700"
         )}
@@ -67,7 +67,7 @@ export const Page: React.FC<PageProps> = ({
           </div>
         ) : null}
       </header>
-      <div className="max-w-3xl px-4">
+      <div className="max-w-3xl px-4 mb-8">
         {" "}
         {/* Hilangkan mx-auto untuk menempel ke atas */}
         {children}

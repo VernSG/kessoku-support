@@ -7,6 +7,7 @@ import { PostList } from "@/components/PostList";
 import { ArrowRight } from "react-feather";
 import { NavigationMenuDemo } from "@/components/ui/navbar";
 import CarouselPlugin from "@/components/carousel";
+import Footer from "@/components/ui/footer";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
@@ -44,6 +45,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             </Link>
           </div>
         </Page>
+        <Footer />
       </div>
     </>
   );
