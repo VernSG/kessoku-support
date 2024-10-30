@@ -6,6 +6,13 @@ export default function Commands() {
     <div className="max-w-3xl mx-auto my-10 px-6">
       <h1 className="text-4xl font-bold mb-4">Available Commands</h1>
       <ul className="list-disc ml-6 space-y-2">
+	<li>
+          <strong>/quiz-anime</strong> - Give question about anime and get point
+        </li>
+        <li>
+          <strong>/leaderboard</strong> - Displays information about point get
+          by answer correct quiz.
+        </li>
         <li>
           <strong>/userinfo</strong> - Displays information about the server or
           a user.

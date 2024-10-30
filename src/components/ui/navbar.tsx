@@ -21,6 +21,16 @@ const commands = [
     description: "Displays information about user.",
   },
   {
+    title: "/quiz-anime",
+    href: "/docs/commands",
+    description: "Get question about anime.",
+  },
+  {
+    title: "/leaderboard",
+    href: "/docs/commands",
+    description: "Display top 10 point quiz anime.",
+  },
+  {
     title: "/info gempa",
     href: "/docs/commands/gempa",
     description: "Get information about Indonesian Earthquake.",
