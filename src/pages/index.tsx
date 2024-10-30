@@ -8,6 +8,8 @@ import { ArrowRight } from "react-feather";
 import { NavigationMenuDemo } from "@/components/ui/navbar";
 import CarouselPlugin from "@/components/carousel";
 import Footer from "@/components/ui/footer";
+import { About } from "@/components/about";
+import { Boxes } from "@/components/ui/background-boxes";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
@@ -15,39 +17,51 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
-    <>
-      <div className="my-8 p-8">
-        <NavigationMenuDemo />
-        <CarouselPlugin />
+    <div className="relative min-h-screen bg-background text-foreground overflow-hidden">
+      {/* Boxes sebagai background dengan z-index lebih rendah */}
+      <div className="fixed inset-0 -z-10">
+        <Boxes />
+      </div>
 
-        <Page
-          title="Blog"
-          description={
-            <>
-              <p>
-                View the blog <a href="/blog">Post MDX</a>.
-              </p>
-            </>
-          }
-        >
-          <PostList posts={posts} />
-          <div className="mt-8">
-            <Link
-              passHref
-              href="/posts"
-              className="group inline-flex items-center gap-2 text-pink-600"
-            >
-              View more posts{" "}
-              <ArrowRight
-                className="group-hover:translate-x-0.5 transition-transform"
-                width={".9em"}
-              />
-            </Link>
-          </div>
-        </Page>
+      {/* Konten utama */}
+      <div className="relative z-20 flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto p-8">
+          <NavigationMenuDemo />
+          <CarouselPlugin />
+          <About />
+        </div>
+
+        <div className="my-8 p-8 w-full max-w-6xl mx-auto">
+          <Page
+            title="Blog"
+            description={
+              <>
+                <p>
+                  View the blog <a href="/blog">Post MDX</a>.
+                </p>
+              </>
+            }
+          >
+            <PostList posts={posts} />
+            <div className="mt-8">
+              <Link
+                passHref
+                href="/posts"
+                className="group inline-flex items-center gap-2 text-primary-foreground"
+              >
+                View more posts{" "}
+                <ArrowRight
+                  className="group-hover:translate-x-0.5 transition-transform"
+                  width={".9em"}
+                />
+              </Link>
+            </div>
+          </Page>
+        </div>
+
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
