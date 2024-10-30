@@ -1,0 +1,68 @@
+---
+title: "Rilis Command Baru: Quiz Anime dan Leaderboard"
+description: "Peluncuran dua command baru untuk bot Discord - Quiz Anime dan Leaderboard"
+date: "2024-10-31"
+tags: ["discord-bot", "anime", "leaderboard", "javascript"]
+---
+
+<Note emoji="🎉">
+  Kami senang memperkenalkan dua command baru untuk bot Discord kami:
+  `quiz-anime` dan `leaderboard`. Kedua command ini dirancang untuk menambah
+  keseruan bagi pengguna yang menyukai anime dan kompetisi.
+</Note>
+
+## 🎮 Command `quiz-anime`
+
+Command `quiz-anime` adalah command interaktif yang memberikan kuis tentang anime kepada pengguna dalam format pilihan ganda. Pengguna akan mendapatkan satu pertanyaan acak seputar anime, dan mereka bisa menjawab dengan mengklik salah satu tombol jawaban yang disediakan.
+
+> Jika jawaban benar, pengguna akan mendapatkan **+1 poin** yang otomatis ditambahkan ke total skor mereka. Poin ini disimpan di database dan digunakan untuk mengukur peringkat mereka di leaderboard.
+
+### Cara Menggunakan `quiz-anime`
+
+Cukup ketik `/quiz-anime` di chat server Discord, dan bot akan menampilkan pertanyaan pilihan ganda lengkap dengan tombol jawaban. Berikut adalah fitur utama dari command ini:
+
+- **Pertanyaan Acak**: Setiap kali pengguna menjalankan command, bot akan memberikan pertanyaan acak dari database kuis anime.
+- **Interaksi Tombol**: Jawaban diberikan melalui tombol pilihan, sehingga pengguna bisa langsung memilih tanpa perlu mengetik ulang.
+- **Sistem Poin Otomatis**: Pengguna yang menjawab dengan benar akan menerima poin tambahan yang disimpan di sistem leaderboard.
+
+<figure>
+  <img src="/quiz-anime.png" alt="Tampilan Pertanyaan Kuis Anime" />
+  <figcaption>
+    Gambar 1: Contoh tampilan pertanyaan pada command <code>quiz-anime</code>.
+  </figcaption>
+</figure>   
+
+<Note emoji="⚠️">
+  Pengguna hanya bisa menjawab satu kali untuk setiap pertanyaan. Tombol akan
+  otomatis dinonaktifkan setelah jawaban pertama diberikan atau waktu habis.
+</Note>
+
+## 🏆 Command `leaderboard`
+
+Command `leaderboard` memungkinkan pengguna untuk melihat peringkat teratas berdasarkan poin yang diperoleh dari kuis anime. Command ini mempromosikan kompetisi yang sehat di antara para pengguna dan mendorong mereka untuk terus menjawab kuis dengan benar.
+
+### Cara Menggunakan `leaderboard`
+
+Ketik `/leaderboard` di chat server Discord, dan bot akan menampilkan daftar pengguna dengan poin tertinggi dalam bentuk embed. Berikut adalah fitur dari command ini:
+
+- **Peringkat 10 Teratas**: Menampilkan daftar pengguna dengan poin tertinggi.
+- **Sistem Poin Terintegrasi**: Poin yang diperoleh dari `quiz-anime` akan otomatis dihitung dalam leaderboard.
+
+<figure>
+  <img src="/leaderboard.png" alt="Tampilan Leaderboard" />
+  <figcaption>
+    Gambar 2: Contoh tampilan leaderboard pada command <code>leaderboard</code>.
+  </figcaption>
+</figure>
+
+<Note emoji="🔥">
+  Dapatkan skor tertinggi dan lihat nama Anda berada di puncak leaderboard!
+</Note>
+
+## Kesimpulan
+
+Dengan tambahan command `quiz-anime` dan `leaderboard`, kami berharap bot Discord ini menjadi lebih interaktif dan memberikan pengalaman yang menyenangkan bagi para penggemar anime. Kedua command ini adalah langkah awal dari banyak fitur menarik yang akan datang. Selamat berkompetisi, dan semoga Anda menjadi juara di leaderboard!
+
+---
+
+> **Catatan**: Pastikan Anda sudah mengupdate bot ke versi terbaru untuk menggunakan kedua command ini. Happy quizzing! 🎉
