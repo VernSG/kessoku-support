@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/partials/_footer.scss";
 import { ThemeProvider } from "next-themes";
+import "../../_astro/index.43b7dfdb.css";
 import type { AppProps } from "next/app";
 import { NavigationMenu } from "@/components/ui/navigation-menu";
 
