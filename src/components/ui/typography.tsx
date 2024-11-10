@@ -38,7 +38,7 @@ export function TypographyDemo() {
 
         <div className="col-span-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <div className="text-white">
+            <div className="">
               <p className="text-xl font-semibold mt-5">
                 <i className={`fa fa-cogs text-2xl text-amber-500`} />{" "}
                 Optimization
@@ -75,7 +75,7 @@ export function TypographyDemo() {
             </div>
           </div>
           <div>
-            <div className="text-white">
+            <div className="">
               <p className="text-xl font-semibold mt-5">
                 <i className={`fa fa-ticket text-2xl text-amber-500`} /> Support
               </p>
