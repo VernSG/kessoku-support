@@ -50,7 +50,7 @@ export function TypographyDemo() {
             </div>
           </div>
           <div>
-            <div className="text-white">
+            <div className="">
               <p className="text-xl font-semibold mt-5">
                 <i
                   className={`fa fa-universal-access text-2xl text-amber-500`}
@@ -64,7 +64,7 @@ export function TypographyDemo() {
             </div>
           </div>
           <div>
-            <div className="text-white">
+            <div className="">
               <p className="text-xl font-semibold mt-5">
                 <i className={`fa fa-shield text-2xl text-amber-500`} />{" "}
                 Security
