@@ -17,11 +17,11 @@ export function TypographyDemo() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 py-24">
         <div className="col-span-4">
           <p
-            className="text-white text-4xl font-bold"
+            className="text-4xl font-bold"
             dangerouslySetInnerHTML={{ __html: "RyoYamada" }}
           />
           <p
-            className="text-white text-md font-medium text-gray-500/75"
+            className="text-md font-medium"
             dangerouslySetInnerHTML={{
               __html:
                 "How about creating the best environment to relax yourself with your own emotions?",

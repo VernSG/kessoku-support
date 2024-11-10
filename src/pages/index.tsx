@@ -8,17 +8,23 @@ import { ArrowRight } from "react-feather";
 import { NavigationMenuDemo } from "@/components/ui/navbar";
 import CarouselPlugin from "@/components/carousel";
 import Footer from "@/components/ui/footer";
+import DiscordWidget from "@/components/widget"; // Import DiscordWidget
+import { WidgetData } from "@/components/widget.types"; // Adjust path as necessary
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
+  widgetData: WidgetData; // Add widgetData to the HomeProps interface
 }
 
-const Home: NextPage<HomeProps> = ({ posts }) => {
+const Home: NextPage<HomeProps> = ({ posts, widgetData }) => {
   return (
     <>
       <div className="my-8 p-8">
         <NavigationMenuDemo />
         <CarouselPlugin />
+        <div className="my-8 flex justify-center">
+          <DiscordWidget widgetData={widgetData} />
+        </div>
 
         <Page
           title="Blog"
@@ -51,11 +57,21 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
   );
 };
 
+// Fetch both widgetData and posts in getStaticProps
 export const getStaticProps: GetStaticProps = async () => {
+  // Fetch posts data
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+
+  // Fetch widget data from Discord API
+  const res = await fetch(
+    "https://discordapp.com/api/guilds/1264199823096025118/widget.json"
+  );
+  const widgetData: WidgetData = await res.json();
+
   return {
     props: {
       posts: mdxFiles.slice(0, 5),
+      widgetData, // Pass widgetData to the page props
     },
   };
 };
