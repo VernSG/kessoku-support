@@ -8,7 +8,6 @@ import { ArrowRight } from "react-feather";
 import { NavigationMenuDemo } from "@/components/ui/navbar";
 import CarouselPlugin from "@/components/carousel";
 import Footer from "@/components/ui/footer";
-import Widget from "@/components/ui/widget";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
@@ -20,15 +19,12 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       <div className="my-8 p-8">
         <NavigationMenuDemo />
         <CarouselPlugin />
-        <div className="flex justify-center mb-8">
-          <Widget />
-        </div>
         <Page
           title="Blog"
           description={
             <>
               <p>
-                View the blog <a href="/blog">Post MDX</a>.
+                View the blog <a href="/blog">Post</a>.
               </p>
             </>
           }

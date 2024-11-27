@@ -18,7 +18,7 @@ export function TypographyDemo() {
         <div className="col-span-4">
           <p
             className="text-4xl font-bold"
-            dangerouslySetInnerHTML={{ __html: "RyoYamada" }}
+            dangerouslySetInnerHTML={{ __html: "Yamada" }}
           />
           <p
             className="text-md font-medium"
